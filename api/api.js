@@ -16,11 +16,8 @@ db.once("open", () => console.log("Database: Connection established"));
 
 app.use(express.json());
 const insultsRouter = require("./routes/insults");
-app.use("/insults", insultsRouter);
+app.use("/api/insults", insultsRouter);
 
-app.get("/", (req, res) => {
-  console.log("Route: /");
-  res.send("This is home!");
-});
-
-app.listen(process.env.PORT, () => console.log("Listening on port: ", process.env.PORT));
+app.listen(process.env.PORT, () =>
+  console.log("Listening on port: ", process.env.PORT)
+);

@@ -5,11 +5,13 @@ const InsultPartType = {
 }
 
 const InsultTheme = {
-  NORMAL: 0,
+  ANY: 0,
+  NORMAL: 1,
 }
 
 const InsultSeverity = {
-  NORMAL: 0,
+  ANY: 0,
+  NORMAL: 1,
 }
 
 module.exports = { InsultPartType, InsultTheme, InsultSeverity };

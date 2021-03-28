@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const InsultPart = require("../models/insultpart");
 
-router.get("/", async (req, res) => {
+router.get("/getallinsultparts", async (req, res) => {
   try {
     const insultParts = await InsultPart.find();
     res.json(insultParts);
@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/new", async (req, res) => {
+router.post("/postinsultpart", async (req, res) => {
   const insultPart = new InsultPart({
     content: req.body.content,
     type: req.body.type,

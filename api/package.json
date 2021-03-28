@@ -1,11 +1,10 @@
 {
-  "name": "api",
+  "name": "insulting-api",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "devStart": "nodemon api.js"
   },
-  "author": "",
+  "author": "Johanstech",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

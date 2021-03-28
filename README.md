@@ -1,4 +1,5 @@
 # Insulting!
+The place to go when you need a new insult, for reasons.
 
 ## What?
 An insult generator that fetches existing insults from a database, or builds new ones from parts, based on theme and severity.

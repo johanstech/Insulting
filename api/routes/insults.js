@@ -4,7 +4,7 @@ const Insult = require("../models/insult");
 const InsultPart = require("../models/insultpart");
 
 //#region Insults
-router.get("/", async (req, res) => {
+router.get("/all", async (req, res) => {
   try {
     const insult = await Insult.find();
     res.json(insult);
@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", getInsult, (req, res) => {
+router.get("/:id", getInsultById, (req, res) => {
   res.json(res.insult);
 });
 
@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-async function getInsult(req, res, next) {
+async function getInsultById(req, res, next) {
   let insult;
   try {
     insult = await Insult.findById(req.params.id);
@@ -57,7 +57,7 @@ router.get("/parts/", async (req, res) => {
   }
 });
 
-router.get("/parts/:id", getInsultPart, (req, res) => {
+router.get("/parts/:id", getInsultPartById, (req, res) => {
   res.json(res.insultPart);
 });
 
@@ -77,7 +77,7 @@ router.post("/parts/", async (req, res) => {
   }
 });
 
-async function getInsultPart(req, res, next) {
+async function getInsultPartById(req, res, next) {
   let insultPart;
   try {
     insultPart = await InsultPart.findById(req.params.id);

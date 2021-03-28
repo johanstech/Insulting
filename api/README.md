@@ -1,3 +1,5 @@
-# Insulting - API
+# Insulting! - API
 
-This is the api part of Insulting
+This is the API part of Insulting!
+
+## 

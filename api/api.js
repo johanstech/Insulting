@@ -14,7 +14,7 @@ const db = mongoose.connection;
 db.on("error", (e) => console.error("Connection Error: ", e));
 db.once("open", () => console.log("Database: Connection established"));
 
-// app.use(express.json);
+app.use(express.json());
 const insultsRouter = require("./routes/insults");
 app.use("/insults", insultsRouter);
 

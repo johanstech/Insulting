@@ -12,14 +12,12 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/new", async (req, res) => {
-  console.log("Test");
   const insultPart = new InsultPart({
     content: req.body.content,
     type: req.body.type,
     theme: req.body.theme,
     severity: req.body.severity,
   });
-  console.log(insultPart);
 
   try {
     const newInsultPart = await insultPart.save();

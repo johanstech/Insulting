@@ -1,5 +1,5 @@
 ## Insulting! - API
 This is the API part of Insulting!
 
-### Test
-More test.
+### API
+A backend API built with JavaScript, Nodejs, Express, and connecting to a mongoDB Atlas database.
